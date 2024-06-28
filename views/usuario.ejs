@@ -1,0 +1,16 @@
+<%- include("templates/encabezado") %>
+<h1>Datos del usuario</h1>
+<table>
+    <tr>
+        <td><%= nombre %></td>
+    </tr>
+    <tr>
+        <td><%= celular %></td>
+    </tr>
+    <tr>
+        <td><%= correo %></td>
+    </tr>
+</table>
+<a href="/nuevaRuta/<%= nombre %>/<%= celular %>/<%= correo %>"></a>
+
+<%- include("templates/pie") %>

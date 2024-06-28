@@ -1,0 +1,48 @@
+<%- include("templates/encabezado") %>
+<%- 
+datos={
+    escritor1:{
+        id:100,
+        nombre:"Edgar Allan Poe",
+        novela:"La caida de la casa de husher"
+    },
+    escritor2:{
+        id:200,
+        nombre:"Oscar Wilde",
+        novela:"El retrato de Dorian"
+    },
+    escritor3:{
+        id:300,
+        nombre:"Julio Verne",
+        novela:"La vuelta al mundo en 80 dias"
+    },
+} %>
+    <h1>Acerca de</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= datos.escritor1.id  %></td>
+                <td><%= datos.escritor1.nombre  %></td>
+                <th><a href="/escritor/<%= datos.escritor1.id  %>/<%= datos.escritor1.nombre  %>">Ver nas ...</a></th>
+            </tr>
+            <tr>
+                <td><%= datos.escritor2.id  %></td>
+                <td><%= datos.escritor2.nombre  %></td>
+                <th><a href="/escritor/<%= datos.escritor2.id  %>">Ver nas ...</a></th>
+            </tr>
+            <tr>
+                <td><%= datos.escritor3.id  %></td>
+                <td><%= datos.escritor3.nombre  %></td>
+                <th><a href="/escritor/<%= datos.escritor3.id  %>">Ver nas ...</a></th>
+            </tr>
+
+        </tbody>
+    </table>
+<%- include("templates/pie") %>
